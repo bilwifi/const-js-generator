@@ -72,7 +72,7 @@
       function showFormateCode({ tab, objectName, capitalize }) {
         let format = "";
         if (objectName) {
-          format += `export const ${objectName} = \n{ \n`;
+          format += `export const ${objectName.toLocaleUpperCase()} = \n{ \n`;
           for (const value of tab) {
             format += `\t${value.toLocaleUpperCase()} : '${
               capitalize ? value.toLocaleUpperCase() : value
